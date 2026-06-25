@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PagBank + EZZE Consórcios | Preparação Executiva</title>
+<style>
+:root{
+  --bg:#06111d; --bg2:#0b2037; --panel:#0f2034; --panel2:#122944; --line:rgba(255,255,255,.12);
+  --text:#f6f8fc; --muted:#aebbd0; --green:#00e676; --green2:#53ff9b; --gold:#f4bd45; --blue:#49a7ff; --red:#ff6b6b; --white:#ffffff;
+  --pag:#00b45a; --ezze:#00ff4c; --anc:#1b5f97; --sem:#ff2b2b;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 15% 0%,#123a5e 0,#07111f 34%,#050b13 100%);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 80%)}
+a{color:inherit;text-decoration:none}.wrap{max-width:1280px;margin:auto;padding:28px}.topbar{position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);background:rgba(5,12,22,.82);border-bottom:1px solid var(--line)}.nav{max-width:1280px;margin:auto;display:flex;gap:10px;align-items:center;justify-content:space-between;padding:12px 28px}.brand{display:flex;gap:10px;align-items:center}.brand-badge{padding:8px 10px;border-radius:12px;background:linear-gradient(135deg,#00e676,#0ea5e9);font-weight:900;color:#04111b}.menu{display:flex;gap:8px;flex-wrap:wrap}.menu a{font-size:13px;color:var(--muted);padding:8px 10px;border:1px solid transparent;border-radius:999px}.menu a:hover{border-color:var(--line);color:#fff;background:rgba(255,255,255,.05)}
+.hero{min-height:690px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding-top:28px}.hero-card{border:1px solid var(--line);border-radius:34px;padding:44px;background:linear-gradient(135deg,rgba(17,45,74,.94),rgba(5,12,22,.92));box-shadow:0 30px 80px rgba(0,0,0,.36)}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--green2);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}.hero h1{font-size:56px;line-height:.98;margin:18px 0}.hero p{color:var(--muted);font-size:18px;line-height:1.6}.logos{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.logo-card{height:150px;border-radius:24px;border:1px solid var(--line);background:rgba(255,255,255,.05);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}.logo-card:before{content:"";position:absolute;inset:-60px;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 55%);opacity:.3}.logo{position:relative;font-size:30px;font-weight:950;letter-spacing:-.04em}.logo small{display:block;font-size:11px;letter-spacing:.18em;color:var(--muted);text-align:center;margin-top:8px}.pag{color:var(--pag)}.ezze{color:var(--ezze)}.anc{color:#7cc3ff}.sem{color:#fff}.sem span{background:var(--sem);padding:2px 8px;border-radius:8px}.meeting{margin-top:18px;padding:14px 16px;border-radius:16px;background:rgba(0,230,118,.1);border:1px solid rgba(0,230,118,.25);color:#d9ffe8;font-weight:700}.section{margin:64px 0}.section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:20px}.section-title h2{font-size:34px;margin:0;color:#fff}.section-title h2 span{color:var(--gold)}.section-title p{max-width:560px;color:var(--muted);margin:0;line-height:1.5}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{grid-column:span 4;border:1px solid var(--line);background:linear-gradient(180deg,rgba(18,41,68,.96),rgba(13,28,47,.96));border-radius:24px;padding:24px;box-shadow:0 16px 40px rgba(0,0,0,.24)}.card.wide{grid-column:span 8}.card.full{grid-column:1/-1}.card.half{grid-column:span 6}.kpi{font-size:38px;font-weight:950;color:var(--gold);letter-spacing:-.04em}.kpi-label{color:#fff;font-weight:850;margin-top:4px}.muted{color:var(--muted);font-size:14px;line-height:1.55}.tag{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;margin:3px;background:rgba(255,255,255,.07);border:1px solid var(--line);color:#fff}.tag.green{background:rgba(0,230,118,.11);color:#a8ffd0;border-color:rgba(0,230,118,.26)}.tag.gold{background:rgba(244,189,69,.12);color:#ffe2a0;border-color:rgba(244,189,69,.28)}.tag.blue{background:rgba(73,167,255,.12);color:#bee2ff;border-color:rgba(73,167,255,.28)}
+.table-wrap{overflow:auto;border-radius:20px;border:1px solid var(--line)}table{width:100%;border-collapse:collapse;min-width:900px;background:rgba(13,28,47,.98)}th,td{padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th{background:linear-gradient(90deg,#0f3d5e,#143f35);color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.06em}td{color:#dce7f7;line-height:1.45}tr:hover td{background:rgba(255,255,255,.03)}strong,.hl{color:#fff;font-weight:900}.gold-text{color:var(--gold);font-weight:900}.green-text{color:var(--green2);font-weight:900}.blue-text{color:#a9d9ff;font-weight:900}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.flow .step{padding:18px;border-radius:18px;background:rgba(255,255,255,.055);border:1px solid var(--line);position:relative}.flow .step:not(:last-child):after{content:"→";position:absolute;right:-14px;top:42%;color:var(--gold);font-size:24px;font-weight:900}.step-num{width:32px;height:32px;display:grid;place-items:center;border-radius:10px;background:var(--gold);color:#06111d;font-weight:950;margin-bottom:10px}.quote{font-size:24px;line-height:1.35;color:#fff;border-left:4px solid var(--green);padding-left:18px;margin:0}.note{font-size:12px;color:var(--muted);line-height:1.45;margin-top:8px}.defs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.def{border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(255,255,255,.045)}.def b{color:var(--green2)}.bar{height:10px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--gold));border-radius:inherit}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.timeline{display:grid;gap:14px}.timeline-item{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:start}.timeline-date{color:#06111d;background:var(--gold);padding:8px 10px;border-radius:12px;text-align:center;font-weight:950}.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.footer{margin-top:70px;padding:26px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.5}.source-list li{margin-bottom:8px}.print-only{display:none}
+@media(max-width:980px){.hero{grid-template-columns:1fr}.hero h1{font-size:42px}.card,.card.half,.card.wide{grid-column:1/-1}.flow{grid-template-columns:1fr}.flow .step:after{display:none}.split,.defs{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}.logos{grid-template-columns:1fr 1fr}.timeline-item{grid-template-columns:1fr}}
+@media print{body{background:#fff;color:#111}.topbar{display:none}.card,.hero-card{box-shadow:none;background:#fff;color:#111;border-color:#ddd}.muted,.small,.note{color:#444}.print-only{display:block}.wrap{max-width:none}.section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="nav">
+    <div class="brand"><div class="brand-badge">PB</div><div><b>PagBank + EZZE</b><br><span class="muted">Preparação Executiva</span></div></div>
+    <div class="menu">
+      <a href="#capa">Capa</a><a href="#pagbank">PagBank</a><a href="#mercado">Mercado</a><a href="#modelo">Modelo Sem Parar</a><a href="#produto">Produto</a><a href="#assessoria">Assessoria</a><a href="#simulacao">Simulação</a><a href="#reuniao">Reunião</a>
+    </div>
+  </nav>
+</header>
+<main class="wrap">
+<section class="hero" id="capa">
+  <div class="hero-card">
+    <div class="eyebrow">Material interno • Preparação para reunião</div>
+    <h1>PagBank + EZZE Consórcios</h1>
+    <p>Business case para estruturar uma operação de consórcios em modelo semelhante à parceria <b>Sem Parar</b>: base parceira, régua de comunicação, qualificação de leads, inside sales, governança por indicadores e comissão de assessoria de <b>1% sobre o crédito vendido</b>.</p>
+    <div class="meeting">Reunião de preparação: próxima terça-feira, 30/06/2026.</div>
+    <div class="pill-row"><span class="tag green">White label*</span><span class="tag gold">Inside sales*</span><span class="tag blue">MQL / SQL*</span><span class="tag">LGPD*</span><span class="tag">BI*</span></div>
+    <p class="note">* Explicações das siglas e termos técnicos aparecem abaixo das seções onde são utilizados.</p>
+  </div>
+  <div class="logos">
+    <div class="logo-card"><div class="logo pag">PagBank<small>base, marca e ecossistema</small></div></div>
+    <div class="logo-card"><div class="logo ezze">EZZE<small>consórcios e parceria</small></div></div>
+    <div class="logo-card"><div class="logo anc">ÂNCORA<small>operação original</small></div></div>
+    <div class="logo-card"><div class="logo sem"><span>SEM PARAR</span><small>referência de modelo</small></div></div>
+  </div>
+</section>
+
+<section class="section" id="pagbank">
+  <div class="section-title"><h2>1. Resumo <span>PagBank</span></h2><p>Leitura rápida sobre quem é a PagBank e por que consórcio se conecta à estratégia de plataforma financeira.</p></div>
+  <div class="grid">
+    <div class="card"><div class="kpi">R$ 5,0 bi</div><div class="kpi-label">Carteira de crédito 1T26</div><p class="muted">Crescimento de 35,9% a/a no crédito, reforçando a expansão de serviços financeiros.</p></div>
+    <div class="card"><div class="kpi">R$ 51,0 bi</div><div class="kpi-label">Portfólio expandido 1T26</div><p class="muted">Inclui antecipação a comerciantes, uma das principais alavancas de liquidez para a base.</p></div>
+    <div class="card"><div class="kpi">R$ 46,1 bi</div><div class="kpi-label">Antecipação a merchants</div><p class="muted">Produto altamente aderente à base de lojistas e pequenos negócios.</p></div>
+    <div class="card half"><h3>Como a PagBank atua</h3><p>A PagBank combina <b>pagamentos</b>, <b>conta digital</b>, <b>crédito</b>, <b>investimentos</b>, <b>seguros</b> e soluções de software para negócios. Essa arquitetura cria um ponto de contato recorrente com clientes PF e PJ.</p></div>
+    <div class="card half"><h3>O espaço do consórcio</h3><p>O consórcio entra como produto de <b>aquisição planejada</b>, preenchendo uma lacuna entre crédito, investimento e seguros. Ele ajuda o cliente a transformar faturamento, renda ou reserva em patrimônio.</p></div>
+  </div>
+  <div class="defs" style="margin-top:16px">
+    <div class="def"><b>*PF</b>: pessoa física.</div><div class="def"><b>*PJ</b>: pessoa jurídica.</div><div class="def"><b>*Merchant</b>: comerciante/cliente de pagamentos, como lojistas, MEIs e negócios que usam adquirência.</div><div class="def"><b>*TPV</b>: Total Payment Volume; volume total de pagamentos processados.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><h2>2. Distribuição de valor por <span>produto</span></h2><p>A leitura por produto mostra onde o consórcio pode aumentar retenção, receita e relacionamento.</p></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Produto PagBank</th><th>Uso atual</th><th>Oportunidade com consórcio</th><th>Ganho estratégico</th></tr></thead>
+    <tbody>
+      <tr><td><b>Maquininhas / pagamentos</b></td><td>Venda, recebimento, Pix, cartão, link, checkout.</td><td>Ofertas para troca de veículo, equipamento, reforma ou expansão do negócio.</td><td><span class="green-text">Retenção</span> e monetização da base transacional.</td></tr>
+      <tr><td><b>Conta PF/PJ</b></td><td>Movimentação financeira diária, boletos, Pix e serviços bancários.</td><td>Simulação e acompanhamento de cotas no app ou esteira parceira.</td><td><span class="green-text">Relacionamento recorrente</span> de longo prazo.</td></tr>
+      <tr><td><b>Crédito</b></td><td>Capital de giro, antecipação e empréstimos.</td><td>Alternativa para aquisição planejada, sem substituir crédito.</td><td><span class="gold-text">Complementaridade</span> entre financiamento, consórcio e seguros.</td></tr>
+      <tr><td><b>Seguros</b></td><td>Proteções financeiras, empresariais e pessoais.</td><td>Cross-sell após contemplação: auto, equipamento, imóvel, vida/prestamista.</td><td><span class="blue-text">Aumento de receita por cliente</span>.</td></tr>
+      <tr><td><b>Investimentos</b></td><td>Reserva, CDBs, fundos e produtos financeiros.</td><td>Consórcio como disciplina de compra futura e construção patrimonial.</td><td><span class="green-text">Educação financeira</span> e planejamento.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="section" id="mercado">
+  <div class="section-title"><h2>3. Mercado de <span>consórcios</span></h2><p>O setor tem escala nacional, crescimento e aderência direta à compra planejada de bens.</p></div>
+  <div class="grid">
+    <div class="card"><div class="kpi">R$ 500 bi</div><div class="kpi-label">Créditos comercializados em 2025</div><p class="muted">Alta de aproximadamente 32% frente a 2024.</p><div class="bar"><i style="width:88%"></i></div></div>
+    <div class="card"><div class="kpi">5,16 mi</div><div class="kpi-label">Cotas vendidas em 2025</div><p class="muted">Crescimento de aproximadamente 15%.</p><div class="bar"><i style="width:74%"></i></div></div>
+    <div class="card"><div class="kpi">12,7 mi</div><div class="kpi-label">Participantes ativos</div><p class="muted">Base nacional relevante para aquisição patrimonial.</p><div class="bar"><i style="width:82%"></i></div></div>
+  </div>
+</section>
+
+<section class="section" id="modelo">
+  <div class="section-title"><h2>4. Modelo de referência: <span>Sem Parar</span></h2><p>A melhor analogia para a reunião é uma operação estruturada sobre base parceira, qualificação, inside sales e transparência de performance.</p></div>
+  <div class="card full">
+    <p class="quote">A tese não é “vender consórcio para a PagBank”. A tese é ativar uma base qualificada da PagBank com governança, tecnologia, régua comercial e indicadores, em um modelo semelhante ao Sem Parar.</p>
+  </div>
+  <div class="flow" style="margin-top:16px">
+    <div class="step"><div class="step-num">1</div><b>Base</b><p class="muted">Dados brutos do parceiro, com amplitude para campanhas segmentadas.</p></div>
+    <div class="step"><div class="step-num">2</div><b>Higienização</b><p class="muted">Tratamento no CRM, validação de dados e WhatsApp Check.</p></div>
+    <div class="step"><div class="step-num">3</div><b>Qualificação</b><p class="muted">Triagem com bot/IA e classificação MQL/SQL.</p></div>
+    <div class="step"><div class="step-num">4</div><b>Venda</b><p class="muted">Vendedor recebe lead qualificado, faz simulação e conduz fechamento.</p></div>
+    <div class="step"><div class="step-num">5</div><b>Visibilidade</b><p class="muted">Dashboard com leads por etapa, conversão, perdas e performance.</p></div>
+  </div>
+  <div class="defs" style="margin-top:16px">
+    <div class="def"><b>*CRM</b>: sistema de gestão do relacionamento com clientes e leads.</div>
+    <div class="def"><b>*WhatsApp Check</b>: validação de números ativos antes de campanhas, reduzindo bloqueios e desperdício.</div>
+    <div class="def"><b>*MQL</b>: lead qualificado por marketing, com demonstração inicial de interesse.</div>
+    <div class="def"><b>*SQL</b>: lead qualificado para venda, pronto para abordagem comercial humana.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><h2>5. Jornada comercial <span>proposta</span></h2><p>Fluxo inspirado no material Sem Parar: abordagem consultiva, nutrição leve, qualificação e pós-venda.</p></div>
+  <div class="timeline">
+    <div class="timeline-item"><div class="timeline-date">Etapa 1</div><div class="card full"><h3>Validação e segurança operacional</h3><p>Checagem da base, validação de números ativos e preparação da régua de contato para preservar entregabilidade e reputação.</p></div></div>
+    <div class="timeline-item"><div class="timeline-date">Etapa 2</div><div class="card full"><h3>Pré-aquecimento</h3><p>Mensagem inicial com comunicação consultiva, destacando que o cliente tem acesso a condições diferenciadas pela parceria.</p></div></div>
+    <div class="timeline-item"><div class="timeline-date">Etapa 3</div><div class="card full"><h3>Nutrição ativa</h3><p>Templates oficiais não agressivos, segunda onda após 48h e terceira onda após 72h para reativação ou descarte positivo.</p></div></div>
+    <div class="timeline-item"><div class="timeline-date">Etapa 4</div><div class="card full"><h3>Qualificação</h3><p>Identificação automática de hot leads, triagem de intenção, descarte de leads frios e priorização do time em oportunidades reais.</p></div></div>
+    <div class="timeline-item"><div class="timeline-date">Etapa 5</div><div class="card full"><h3>Conclusão e pós-venda</h3><p>Formalização digital, gestão via aplicativo, reporting de performance e acompanhamento dos clientes convertidos.</p></div></div>
+  </div>
+</section>
+
+<section class="section" id="produto">
+  <div class="section-title"><h2>6. Produto EZZE / Âncora: <span>diferenciais</span></h2><p>A operação se beneficia da estrutura da Âncora, apresentada como especialista e pioneira em white label, com equipe dedicada à EZZE Consórcios.</p></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Linha</th><th>Condição apresentada</th><th>Potencial na base PagBank</th></tr></thead>
+    <tbody>
+      <tr><td><b>Automóveis</b></td><td>Carros novos e usados até 8 anos; motos novas e usadas até 5 anos; taxas a partir de 14%; prazo de 100 meses.</td><td>MEIs, motoristas, entregadores, famílias e profissionais autônomos.</td></tr>
+      <tr><td><b>Pesados</b></td><td>Caminhões novos e usados até 8 anos; renovação de frota e automóveis premium; taxas a partir de 12%; prazo de 120 meses.</td><td>Transportadores, frotistas, lojistas, empresas com logística própria.</td></tr>
+      <tr><td><b>Imóveis</b></td><td>Imóveis urbanos/rurais, terrenos e construções; taxas a partir de 18%; prazo médio de 200 meses.</td><td>Empresários, investidores, expansão de ponto comercial e compra patrimonial.</td></tr>
+      <tr><td><b>Contemplação</b></td><td>Sorteio, lance livre, lance fixo de 30%, lance fidelidade de 25%, lance limitado e embutido de 30%.</td><td>Flexibilidade comercial para diferentes perfis de capacidade financeira.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="defs" style="margin-top:16px"><div class="def"><b>*White label</b>: produto operado por uma estrutura especializada, mas apresentado com marca e experiência do parceiro.</div><div class="def"><b>*Lance embutido</b>: uso de parte do próprio crédito da carta como oferta de lance.</div><div class="def"><b>*Contemplação</b>: momento em que o consorciado obtém o direito de usar a carta de crédito.</div><div class="def"><b>*Taxa de administração</b>: remuneração da administradora pelo gerenciamento do grupo de consórcio.</div></div>
+</section>
+
+<section class="section" id="assessoria">
+  <div class="section-title"><h2>7. Papel da <span>assessoria</span></h2><p>A assessoria entra como camada de conhecimento, organização e performance — não como simples canal de venda.</p></div>
+  <div class="split">
+    <div class="card full"><h3>O que entregamos</h3><ul><li><b>Desenho operacional</b> da jornada e matriz de responsabilidades.</li><li><b>Playbook comercial</b> para a base PagBank.</li><li><b>Treinamento</b> sobre produto, objeções, simulação, lances e pós-venda.</li><li><b>Governança</b> com SLA, rotina de acompanhamento e indicadores.</li><li><b>BI</b> com funil, conversão, qualidade da base e causas de perda.</li></ul></div>
+    <div class="card full"><h3>Por que a remuneração se sustenta</h3><p>A comissão de <b>1% sobre o crédito vendido</b> remunera a estruturação da operação, a capacidade técnica, o acompanhamento contínuo e a redução de risco comercial. O valor não remunera apenas o fechamento; remunera o ecossistema de implantação e performance.</p></div>
+  </div>
+  <div class="table-wrap" style="margin-top:16px"><table>
+    <thead><tr><th>Camada de valor</th><th>Problema que resolve</th><th>Indicador de sucesso</th></tr></thead>
+    <tbody>
+      <tr><td><b>Qualificação da base</b></td><td>Evita acionar clientes sem aderência ou contato inválido.</td><td>Contactabilidade, taxa de ativação, MQL.</td></tr>
+      <tr><td><b>Régua de comunicação</b></td><td>Evita abordagem agressiva e melhora engajamento.</td><td>Opt-in, resposta, reativação de neutros.</td></tr>
+      <tr><td><b>Treinamento e scripts</b></td><td>Reduz venda mal explicada e aumenta conversão.</td><td>Conversão SQL → contrato, cancelamento inicial.</td></tr>
+      <tr><td><b>Dashboard e governança</b></td><td>Dá transparência à jornada e decisões orientadas por dados.</td><td>Leads por etapa, motivos de perda, receita.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="defs" style="margin-top:16px"><div class="def"><b>*SLA</b>: acordo de nível de serviço; define prazos e responsabilidades.</div><div class="def"><b>*BI</b>: Business Intelligence; painéis de indicadores para gestão.</div><div class="def"><b>*Opt-in</b>: consentimento ou manifestação positiva de interesse do cliente.</div><div class="def"><b>*Hot lead</b>: lead com alto sinal de intenção de compra.</div></div>
+</section>
+
+<section class="section" id="simulacao">
+  <div class="section-title"><h2>8. Simulação de <span>receita da assessoria</span></h2><p>Considerando comissão de 1% sobre o crédito vendido, parcelada em 8x, no padrão de referência comercial.</p></div>
+  <div class="grid">
+    <div class="card"><div class="kpi">1,0%</div><div class="kpi-label">Comissão da assessoria</div><p class="muted">Sobre o crédito vendido.</p></div>
+    <div class="card"><div class="kpi">8x</div><div class="kpi-label">Parcelamento</div><p class="muted">Modelo de referência Sem Parar: parcelamento em 8x sem estorno.</p></div>
+    <div class="card"><div class="kpi">R$ 10 mil</div><div class="kpi-label">A cada R$ 1 milhão vendido</div><p class="muted">Receita nominal da assessoria antes do parcelamento.</p></div>
+  </div>
+  <div class="table-wrap" style="margin-top:16px"><table>
+    <thead><tr><th>Cenário mensal de crédito vendido</th><th>Comissão total da assessoria</th><th>Recebimento mensal por 8 meses</th><th>Leitura executiva</th></tr></thead>
+    <tbody>
+      <tr><td><b>R$ 2.000.000</b></td><td>R$ 20.000</td><td>R$ 2.500/mês</td><td>Entrada conservadora para piloto.</td></tr>
+      <tr><td><b>R$ 5.000.000</b></td><td>R$ 50.000</td><td>R$ 6.250/mês</td><td>Operação ganhando tração.</td></tr>
+      <tr><td><b>R$ 10.000.000</b></td><td>R$ 100.000</td><td>R$ 12.500/mês</td><td>Esteira comercial com escala.</td></tr>
+      <tr><td><b>R$ 25.000.000</b></td><td>R$ 250.000</td><td>R$ 31.250/mês</td><td>Potencial de operação madura com base ampla.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid" style="margin-top:16px">
+    <div class="card"><div class="kpi">R$ 321,6 mi</div><div class="kpi-label">Crédito vendido em 24 meses</div><p class="muted">Cenário evolutivo a partir da simulação recebida.</p></div>
+    <div class="card"><div class="kpi">R$ 3,22 mi</div><div class="kpi-label">Comissão nominal</div><p class="muted">1% sobre o crédito vendido acumulado.</p></div>
+    <div class="card"><div class="kpi">R$ 2,42 mi</div><div class="kpi-label">Recebido em 24 meses</div><p class="muted">Considerando parcelamento em 8x e esteira mensal.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><h2>9. Governança, dados e <span>segurança</span></h2><p>O modelo Sem Parar traz elementos importantes para proteger a operação e a reputação dos parceiros.</p></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Tema</th><th>Diretriz recomendada</th><th>Por que importa</th></tr></thead>
+    <tbody>
+      <tr><td><b>LGPD</b></td><td>Uso limitado à finalidade, controle de acesso, segurança, registro e rastreabilidade.</td><td>Protege dados da base e reduz risco reputacional.</td></tr>
+      <tr><td><b>Contrato jurídico</b></td><td>Definir dados, escopo, responsabilidades, modelo de acompanhamento e formalização.</td><td>Evita conflito entre PagBank, EZZE, Âncora e assessoria.</td></tr>
+      <tr><td><b>Painel de performance</b></td><td>Visão de leads recebidos, válidos, negociação, venda, contactabilidade e perdas.</td><td>Garante transparência e gestão real time.</td></tr>
+      <tr><td><b>Ferramentas</b></td><td>WhatsApp API oficial, SWR/CRM, bots/IA, vendedores, Power BI, Newcon e marketing digital.</td><td>Conecta operação, tecnologia e controle comercial.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="defs" style="margin-top:16px"><div class="def"><b>*LGPD</b>: Lei Geral de Proteção de Dados; regula uso de dados pessoais no Brasil.</div><div class="def"><b>*API</b>: interface técnica que conecta sistemas.</div><div class="def"><b>*Power BI</b>: ferramenta de painéis e análise de dados.</div><div class="def"><b>*Newcon</b>: sistema utilizado para cadastro e gestão de vendas de consórcio na operação Âncora.</div></div>
+</section>
+
+<section class="section" id="reuniao">
+  <div class="section-title"><h2>10. Preparação para a <span>terça-feira</span></h2><p>Checklist objetivo para alinhar o time antes da conversa com a PagBank.</p></div>
+  <div class="grid">
+    <div class="card half"><h3>Mensagem principal</h3><p>A PagBank tem base, marca, canais e relacionamento. A EZZE/Âncora tem produto, operação e experiência white label. A assessoria conecta as duas pontas com método, gestão e performance.</p></div>
+    <div class="card half"><h3>Posicionamento</h3><p>Não defender como “corretagem”. Defender como <b>operação estruturada de ativação de base</b>, com governança e remuneração por valor gerado.</p></div>
+    <div class="card full"><h3>Perguntas que precisamos sair respondendo</h3><div class="table-wrap"><table><thead><tr><th>Pergunta</th><th>Objetivo</th></tr></thead><tbody><tr><td>Qual será a base inicial de clientes e quais campos estarão disponíveis?</td><td>Definir segmentação, LGPD e potencial de conversão.</td></tr><tr><td>Quem fará a abordagem: PagBank, EZZE, Âncora, assessoria ou estrutura dedicada?</td><td>Fechar matriz operacional.</td></tr><tr><td>Qual será a régua de comunicação aprovada?</td><td>Preservar marca e evitar abordagem agressiva.</td></tr><tr><td>Como será o comissionamento de 1% e seu fluxo de pagamento?</td><td>Formalizar remuneração da assessoria.</td></tr><tr><td>Quais indicadores serão compartilhados semanalmente?</td><td>Garantir governança e melhoria contínua.</td></tr></tbody></table></div></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <b>Fontes utilizadas para preparação:</b>
+  <ul class="source-list">
+    <li>PagBank Investor Relations — resultados 1T26, carteira de crédito, portfólio expandido e materiais institucionais.</li>
+    <li>EZZE Consórcios / Âncora — apresentação de produto, condições comerciais, modalidades de lance e estrutura white label.</li>
+    <li>EZZE Consórcio — Parceria Sem Parar — proposta comercial, jornada de leads, inside sales, LGPD, dashboard e comissionamento.</li>
+    <li>Simulação Assessoria — base de projeção de produção e fluxo de comissão.</li>
+  </ul>
+</footer>
+</main>
+</body>
+</html>
